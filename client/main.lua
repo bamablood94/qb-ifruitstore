@@ -266,6 +266,7 @@ RegisterNetEvent('qb-ifruitstore:client:PoliceAlertMessage', function(msg, coord
 end)
 
 RegisterNetEvent('qb-ifruitstore:client:robberyCall', function(streetLabel, coords)
+    local PlayerJob = QBCore.Functions.GetPlayerData()
     if PlayerJob.name == "police" then
 
         PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
